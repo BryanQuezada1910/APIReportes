@@ -9,9 +9,9 @@ app.use(express.json());
 
 // Connect to MongoDB
 // Modify the URI to connect to the database in Docker
-const mongooseURIDocker = 'mongodb://host.docker.internal:27017/dbProducts';
+// const mongooseURIDocker = 'mongodb://host.docker.internal:27017/dbProducts';
 // Modify the URI to connect to the database in localhost
-const mongooseURI = 'mongodb://localhost:27017/dbProducts';
+const mongooseURI = 'mongodb+srv://bryan_quezada:AfOYD6Ju7f70PSA7@cluster0.1yrzoce.mongodb.net/APIReportes?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect((mongooseURI), {
 }).then(() => {
