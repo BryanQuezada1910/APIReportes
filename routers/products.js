@@ -87,7 +87,7 @@ router.get('/reporte', async (req, res) => {
         const browser = await puppeteer.launch({
             headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
-            executablePath: await puppeteer.executablePath()
+            executablePath: '/app/node_modules/puppeteer/.local-chromium/linux-901912/chrome-linux/chrome'
         });
         const page = await browser.newPage();
         await page.setContent(htmlContent);
