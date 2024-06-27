@@ -86,7 +86,8 @@ router.get('/reporte', async (req, res) => {
         // Generar el reporte PDF con Puppeteer
         const browser = await puppeteer.launch({
             headless: true,
-            args: ['--no-sandbox', '--disable-setuid-sandbox']
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            executablePath: await chromium.executablePath
         });
         const page = await browser.newPage();
         await page.setContent(htmlContent);
