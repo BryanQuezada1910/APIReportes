@@ -95,6 +95,7 @@ router.get('/reporte', async (req, res) => {
         await browser.close();
 
         // Enviar el PDF como respuesta al cliente
+        res.setHeader('Content-Disposition', 'attachment; filename=reporte.pdf');
         res.contentType("application/pdf");
         res.send(pdfBuffer);
     } catch (error) {
